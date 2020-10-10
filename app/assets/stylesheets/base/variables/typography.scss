@@ -1,0 +1,111 @@
+//Font Family imports
+
+//
+
+$sans-serif: "Source Sans Pro",
+Helvetica,
+Verdana,
+sans-serif;
+$serif: Merriweather,
+Georgia,
+"Times New Roman",
+serif;
+$mono: "Source Code Pro",
+Courier,
+mono;
+
+
+$mainFont:'', $sans-serif;
+$sideFont:'', $serif;
+$altFont:'', $sans-serif;
+
+
+$font-size: 100%;
+$ratio: 1.33;
+$ratio-large: 1.68;
+
+
+$h4: $font-size * $ratio;
+$h3: $h4 * $ratio;
+$h2: $h3 * $ratio;
+$h1: $h2 * $ratio;
+
+$h4-large: $font-size * $ratio-large;
+$h3-large: $h4-large * $ratio-large;
+$h2-large: $h3-large * $ratio-large;
+$h1-large: $h2-large * $ratio-large;
+
+:root{
+  --font-weight--thin: 100;
+  --font-weight--extra-light: 200;
+  --font-weight--light: 300;
+  --font-weight--normal: 400;
+  --font-weight--medium: 500;
+  --font-weight--semi-bold: 600;
+  --font-weight--bold: 700;
+  --font-weight--extra-bold: 800;
+  --font-weight--black: 900;
+}
+
+:root {
+  --font-size: #{$font-size};
+  --ratio: #{$ratio};
+  --ratio-large: #{$ratio-large};
+
+  --h4: calc(var(--font-size) * var(--ratio));
+  --h3: calc(var(--h4) * var(--ratio));
+  --h2: calc(var(--h3) * var(--ratio));
+  --h1: calc(var(--h2) * var(--ratio));
+}
+
+p {
+  font-size: $font-size;
+  font-size: var(--font-size);
+}
+
+h1 {
+  font-size: $h1;
+  font-size: var(--h1);  
+
+  
+}
+
+h2 {
+  font-size: $h2;
+  font-size: var(--h2); 
+}
+
+h3 {
+  font-size: $h3;
+  font-size: var(--h4);
+}
+
+h4 {
+  font-size: $h4;
+  font-size: var(--h4);
+}
+
+ 
+ @include grid-media($desktop){
+  :root {
+    --ratio: var(--ratio-large);
+  }
+
+  h1 {
+    font-size: $h1-large;
+  }
+
+  h2 {
+    font-size: $h2-large;
+  }
+
+  h3 {
+    font-size: $h3-large; 
+  }
+
+  h4 {
+    font-size: $h4-large; 
+  }
+
+
+}

@@ -1,0 +1,30 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+
+
+html,
+body {
+
+  position: relative;
+  min-height: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  font-weight: 400;
+  line-height: 1.30; 
+
+
+}
